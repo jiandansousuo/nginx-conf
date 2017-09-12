@@ -1,5 +1,8 @@
 # nginx-conf
 
+1. 使用 [certbot](https://github.com/certbot/certbot) 认证 [letsencrypt](https://letsencrypt.org/) 证书
+1. 使用基于 [jenkins](https://jenkins.io/) 搭建的 [上线CI服务](https://ci.xuexb.com/view/%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2/job/jiandansousuo-nginx/)
+
 ### 编译nginx参数
 
 ```
@@ -63,19 +66,9 @@ configure arguments:
     -d jiandansousuo.cn \
     -d www.jiandansousuo.cn
 
-# 生成dhparam
-openssl dhparam -out ./ssl/dhparam.pem 2048
-
-# 生成root_ca_cert_plus_intermediates
-wget https://letsencrypt.org/certs/isrgrootx1.pem
-mv isrgrootx1.pem root.pem
-cat root.pem chain.pem > root_ca_cert_plus_intermediates
-
 # 自动更新
 ~/nginx-conf/bin/certbot-auto renew
 ```
 
 ### 感谢
 
-- [certbot](https://github.com/certbot/certbot)
-- [letsencrypt](https://letsencrypt.org/)

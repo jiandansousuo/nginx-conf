@@ -15,4 +15,5 @@ pids
 .env
 
 /acme-challenge/
-/ssl/
+/ssl
+/conf/*.default

@@ -4,11 +4,11 @@
 
 ```
 configure arguments:
-    --prefix=/home/centos/local/nginx-${version}
-    --pid-path=/home/centos/var/run/nginx.pid
-    --lock-path=/home/centos/var/run/nginx.lock
-    --conf-path=/home/centos/github/nginx-conf/conf/nginx.conf 
-    --with-openssl=../src/openssl-OpenSSL_1_0_2k
+    --prefix=nginx-${version}
+    --pid-path=var/run/nginx.pid
+    --lock-path=var/run/nginx.lock
+    --conf-path=nginx-conf/conf/nginx.conf 
+    --with-openssl=src/openssl-OpenSSL_1_0_2k
     --user=centos
     --group=centos
     --with-http_ssl_module
@@ -44,7 +44,7 @@ configure arguments:
 ./acme-challenge/
 
 # 日志源文件
-/home/centos/var/log/nginx/last/{access,error}.{type}.log
+~/var/log/nginx/last/{access,error}.{type}.log
 ```
 
 ### 命令
@@ -53,7 +53,7 @@ configure arguments:
 # 获取证书, 更新后把证书ln到./ssl中
 ./bin/certbot-auto certonly \
     --no-bootstrap \
-    --webroot -w /home/centos/github/nginx-conf/acme-challenge \
+    --webroot -w ~/nginx-conf/acme-challenge \
     -d www.jiandansousuo.com \
     -d jiandansousuo.com \
     -d api.jiandansousuo.com \
@@ -72,7 +72,7 @@ mv isrgrootx1.pem root.pem
 cat root.pem chain.pem > root_ca_cert_plus_intermediates
 
 # 自动更新
-/home/centos/nginx-conf/bin/certbot-auto renew
+~/nginx-conf/bin/certbot-auto renew
 ```
 
 ### 感谢

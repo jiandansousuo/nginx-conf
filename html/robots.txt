@@ -1,4 +1,4 @@
-# @jiandansousuo
+# @jiandansousuo.com
 User-agent: Baiduspider
 Allow: /
 

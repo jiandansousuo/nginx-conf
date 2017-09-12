@@ -9,8 +9,8 @@ configure arguments:
     --lock-path=/home/centos/var/run/nginx.lock
     --conf-path=/home/centos/github/nginx-conf/conf/nginx.conf 
     --with-openssl=../src/openssl-OpenSSL_1_0_2k
-    --user=nginx
-    --group=nginx
+    --user=centos
+    --group=centos
     --with-http_ssl_module
     --with-http_realip_module
     --with-http_dav_module

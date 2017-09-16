@@ -67,8 +67,5 @@ configure arguments:
     -d www.jiandansousuo.cn
 
 # 自动更新
-~/nginx-conf/bin/certbot-auto renew
+./bin/certbot-auto renew
 ```
-
-### 感谢
-

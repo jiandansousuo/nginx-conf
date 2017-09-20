@@ -56,7 +56,7 @@ configure arguments:
 # 获取证书, 更新后把证书ln到./ssl中
 ./bin/certbot-auto certonly \
     --no-bootstrap \
-    --webroot -w ~/nginx-conf/acme-challenge \
+    --webroot -w ./acme-challenge \
     -d www.jiandansousuo.com \
     -d jiandansousuo.com \
     -d api.jiandansousuo.com \
@@ -64,7 +64,8 @@ configure arguments:
     -d jiandansousuo.org \
     -d www.jiandansousuo.org \
     -d jiandansousuo.cn \
-    -d www.jiandansousuo.cn
+    -d www.jiandansousuo.cn \
+    -d demo.jiandansousuo.com
 
 # 自动更新
 ./bin/certbot-auto renew

@@ -12,8 +12,8 @@ configure arguments:
     --lock-path=var/run/nginx.lock
     --conf-path=nginx-conf/conf/nginx.conf 
     --with-openssl=src/openssl-OpenSSL_1_0_2k
-    --user=centos
-    --group=centos
+    --user=xiaowu
+    --group=xiaowu
     --with-http_ssl_module
     --with-http_realip_module
     --with-http_dav_module
@@ -57,6 +57,8 @@ configure arguments:
 ./bin/certbot-auto certonly \
     --no-bootstrap \
     --webroot -w ./acme-challenge \
+    -d amp.jiandansousuo.com \
+    -d mip.jiandansousuo.com \
     -d www.jiandansousuo.com \
     -d jiandansousuo.com \
     -d api.jiandansousuo.com \

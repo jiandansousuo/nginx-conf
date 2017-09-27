@@ -17,3 +17,10 @@ pids
 /acme-challenge/
 /ssl
 /conf/*.default
+conf/fastcgi.conf
+conf/fastcgi_params
+conf/koi-utf
+conf/koi-win
+conf/scgi_params
+conf/uwsgi_params
+conf/win-utf
